@@ -39,7 +39,7 @@ copyIpButton.addEventListener('click', function() {
     input.select();
     document.execCommand('copy');
     document.body.removeChild(input);
-    alert('服务器地址已复制到粘贴板！');
+    alert('服务器群号已复制到粘贴板！');
 });
 
 tailwind.config = { theme: { extend: { colors: { primary: '#007AFF', secondary: '#5856D6' }, borderRadius: { 'none': '0px', 'sm': '2px', DEFAULT: '4px', 'md': '8px', 'lg': '12px', 'xl': '16px', '2xl': '20px', '3xl': '24px', 'full': '9999px', 'button': '4px' } } } }
