@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深夜食堂 服务器</title>
+    <link rel="icon" href="./img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-white">
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-['Pacifico'] text-primary">深夜食堂</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-primary">特色</a>
+                    <a href="#ip" class="text-gray-700 hover:text-primary">服务器IP</a>
+                    <a href="#advantages" class="text-gray-700 hover:text-primary">优势</a>
+                    <a href="#rules" class="text-gray-700 hover:text-primary">模组展示</a>
+                    <a href="#team" class="text-gray-700 hover:text-primary">赞助名单</a>
+                    <a href="#faq" class="text-gray-700 hover:text-primary">常见问题</a>
+                </div>
+                <a href="#features" class="!rounded-button bg-primary text-white px-6 py-2 whitespace-nowrap">立即加入</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section h-screen flex items-center justify-center text-center text-white"
+        style="background-image: url('./img/banner.png');">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-6xl font-bold mb-6">深夜食堂服务器</h1>
+            <p class="text-xl mb-8">休闲养老主导的科技冒险服务器</p>
+            <a href="#features"
+                class="!rounded-button bg-primary text-white px-8 py-3 text-lg whitespace-nowrap">开启冒险</a>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">服务器特色</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-lg shadow-lg">
+                    <img src="./img/res.jpg" class="w-full h-48 object-cover rounded-lg mb-6" alt="特色功能">
+                    <h3 class="text-xl font-bold mb-4">休闲养老玩法</h3>
+                    <p class="text-gray-600">添加超多休闲养老模组。</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-lg">
+                    <img src="./img/home.png" class="w-full h-48 object-cover rounded-lg mb-6" alt="特色功能">
+                    <h3 class="text-xl font-bold mb-4">科技玩法</h3>
+                    <p class="text-gray-600">机械动力等超多科技模组。</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-lg">
+                    <img src="./img/geyser.png" class="w-full h-48 object-cover rounded-lg mb-6" alt="特色功能">
+                    <h3 class="text-xl font-bold mb-4">冒险玩法</h3>
+                    <p class="text-gray-600">太空、暮色、天堂等更多惊喜模组等你发现。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ip">
+        <div class="bg-primary/5 px-4 text-center py-20">
+            <h2 class="text-4xl font-bold mb-8">服务器QQ群</h2>
+            <div class="inline-flex items-center gap-4 bg-white px-8 py-4 rounded-lg shadow-sm">
+                <span id="ip-text" class="text-2xl font-mono">583365869</span>
+                <button id="copy-ip"
+                    class="px-4 py-2 bg-primary text-white !rounded-button hover:bg-primary/90 whitespace-nowrap">
+                    <i class="far fa-copy mr-2"></i>复制
+                </button>
+            </div>
+            <p class="mt-6 text-gray-600">群内提供服务器整合包下载</p>
+        </div>
+    </section>
+
+    <section id="advantages" class="py-12 bg-gray-50">
+        <div class="max-w-[1440px] mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">为什么选择我们？</h2>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-server text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">高性能服务器</h3>
+                    <p class="text-gray-600">采用AMD 9900X CPU，确保游戏流畅运行</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">存档不丢失</h3>
+                    <p class="text-gray-600">每日备份两次，同时采用云端备份与本地备份</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">积极听取意见</h3>
+                    <p class="text-gray-600">说出你对服务器的想法或想玩的模组，我们会尽快添加</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-sync text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">不定期更新内容</h3>
+                    <p class="text-gray-600">不定期更新游戏内容，举办特别活动，带来全新游戏体验</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <section id="rules" class="py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16">模组展示</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- 左侧栏：休闲养老类mod -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-4">
+          <i class="fas fa-coffee text-primary mr-2"></i>
+          休闲养老类mod
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>网页屏幕💻</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>网络音乐机🎵</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>更多家具🛋</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>锦致装饰🧸</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>底片（拍摄照片）📷</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>国际象棋，四字棋，井字棋，扑克牌🎲</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>农夫乐事，屠夫乐事，料理乐事🍳</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>火锅🍲</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>沉浸式飞机✈️</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>枪械🔫</span>
+          </li>
+        </ul>
+      </div>
+      <!-- 第二栏：科技类mod -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-4">
+          <i class="fas fa-microchip text-primary mr-2"></i>
+          科技类mod
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>机械动力</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>机械动力：火炮💣</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>机械动力：雷达📡</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>机械动力：拓展🔄</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>机械动力：物品附加🔄</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>机械动力：末影传输🌌</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>机械动力：电气时代⚡</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>机械动力：汽鸣铁道🚂</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>我的世界铁路🚄</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>精妙存储📥</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>汤姆的简易存储📦</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>附魔工业✨</span>
+          </li>
+        </ul>
+      </div>
+      <!-- 第三栏：维度探索类mod -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-4">
+          <i class="fas fa-globe text-primary mr-2"></i>
+          维度探索类mod
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>太空🚀</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>暮色森林🌲</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>天堂☁</span>
+          </li>
+        </ul>
+      </div>
+      <!-- 第四栏：实用工具类mod -->
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold mb-4">
+          <i class="fas fa-tools text-primary mr-2"></i>
+          实用工具类mod
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>搬运mod📦</span>
+               </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>连锁挖矿⛏️</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>旅行者背包🎒</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+            <span>精妙背包🎒</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+    <section id="faq" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">常见问题</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">如何加入服务器？</h3>
+                    <p class="text-gray-600">加入我们的QQ群下载整合包后将压缩包拖入启动器安装即可（推荐使用PCL启动器，群文件内提供下载）。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">服务器是否需要正版？</h3>
+                    <p class="text-gray-600">不需要。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2">按键有好多冲突怎么办？</h3>
+                    <p class="text-gray-600">进入游戏按键盘左上角的“~”键进行可视化分配按键。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+</section>
+    <section id="team" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16">赞助名单</h2>
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div class="team-member bg-white p-6 rounded-lg shadow-lg text-center relative">
+        <img src="./img/notch.png" class="w-32 h-32 rounded-full mx-auto mb-4" alt="管理员">
+        <h3 class="text-xl font-bold">anhaotong</h3>
+      </div>
+      <div class="team-member bg-white p-6 rounded-lg shadow-lg text-center relative">
+        <img src="./img/Dream.png" class="w-32 h-32 rounded-full mx-auto mb-4" alt="管理员">
+        <h3 class="text-xl font-bold">KirinoMizu_</h3>
+      </div>
+      <div class="team-member bg-white p-6 rounded-lg shadow-lg text-center relative">
+        <img src="./img/Creeper.png" class="w-32 h-32 rounded-full mx-auto mb-4" alt="管理员">
+        <h3 class="text-xl font-bold">PartyFish</h3>
+      </div>
+      <div class="team-member bg-white p-6 rounded-lg shadow-lg text-center relative">
+        <img src="./img/Steve.png" class="w-32 h-32 rounded-full mx-auto mb-4" alt="管理员">
+        <h3 class="text-xl font-bold">flyfire</h3>
+      </div>
+      <div class="team-member bg-white p-6 rounded-lg shadow-lg text-center relative">
+        <img src="./img/zanzhu1.png" class="w-32 h-32 rounded-full mx-auto mb-4" alt="管理员">
+        <h3 class="text-xl font-bold">survivorW_Q</h3>
+      </div>
+    </div>
+  </div>
+        
+        <section class="py-16 bg-gray-50">
+  <div class="max-w-2xl mx-auto px-4">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h3 class="text-xl font-bold mb-6 flex items-center">
+        <i class="fas fa-qrcode text-primary mr-2"></i>
+        支持我们 - 服务器续费捐款渠道
+      </h3>
+      
+      <!-- 二维码容器 -->
+      <div class="flex flex-wrap gap-8 justify-center mb-6">
+        <!-- 支付宝二维码 -->
+        <div class="text-center">
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <img src="./img/alipay-qr.png" alt="支付宝收款码" class="w-48 h-48 mx-auto mb-2">
+          </div>
+          <p class="text-sm mt-2">支付宝</p>
+        </div>
+        
+        <!-- 微信二维码 -->
+        <div class="text-center">
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <img src="./img/wechat-qr.png" alt="微信收款码" class="w-48 h-48 mx-auto mb-2">
+          </div>
+          <p class="text-sm mt-2">微信支付</p>
+        </div>
+      </div>
+
+      <!-- 备注文字 -->
+      <p class="text-sm text-gray-500 text-center">
+        <i class="fas fa-info-circle mr-1"></i>
+        捐款请备注id，您的每一分捐款都将用来续费服务器，感谢您对社区的支持！
+      </p>
+    </div>
+  </div>
+</section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <span class="text-2xl font-['Pacifico'] text-primary">深夜食堂</span>
+                    <p class="mt-4 text-gray-400">创造属于你的 Minecraft 冒险</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white">服务器特色</a></li>
+                        <li><a href="#rules" class="text-gray-400 hover:text-white">模组列表</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white">赞助名单</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">联系我们</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">QQ群：583365869</li>
+                        <li class="text-gray-400">邮箱：jianlingao17@outlook.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">关注我们</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-qq text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-bilibili text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 深夜食堂服务器. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+
+</html>
