@@ -44,21 +44,4 @@ copyIpButton.addEventListener('click', function() {
 
 tailwind.config = { theme: { extend: { colors: { primary: '#007AFF', secondary: '#5856D6' }, borderRadius: { 'none': '0px', 'sm': '2px', DEFAULT: '4px', 'md': '8px', 'lg': '12px', 'xl': '16px', '2xl': '20px', '3xl': '24px', 'full': '9999px', 'button': '4px' } } } }
 
-// 模组介绍折叠功能
-document.querySelector('.mod-container').addEventListener('click', (event) => {
-  // 检查是否点击了mod-header区域
-  if (event.target.closest('.mod-header')) {
-    const header = event.target.closest('.mod-header');
-    const wrapper = header.closest('.mod-item'); // 每个mod的最外层容器
-    const description = wrapper.querySelector('.mod-description');
-    const chevron = header.querySelector('.fa-chevron-down');
 
-    // 切换展开状态
-    const isOpen = description.style.maxHeight;
-    description.style.maxHeight = isOpen ? null : `${description.scrollHeight}px`;
-
-    // 切换图标状态
-    chevron.classList.toggle('rotate-180');
-    wrapper.classList.toggle('active');
-  }
-});
