@@ -44,24 +44,3 @@ copyIpButton.addEventListener('click', function() {
 
 tailwind.config = { theme: { extend: { colors: { primary: '#007AFF', secondary: '#5856D6' }, borderRadius: { 'none': '0px', 'sm': '2px', DEFAULT: '4px', 'md': '8px', 'lg': '12px', 'xl': '16px', '2xl': '20px', '3xl': '24px', 'full': '9999px', 'button': '4px' } } } }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const modInfoElements = document.querySelectorAll('.mod-info');
-    const popup = document.getElementById('mod-info-popup');
-    const closePopupButton = document.getElementById('close-popup');
-    const modInfoTitle = document.getElementById('mod-info-title');
-    const modInfoText = document.getElementById('mod-info-text');
-
-    modInfoElements.forEach(function (element) {
-        element.addEventListener('click', function () {
-            const info = element.getAttribute('data-info');
-            modInfoTitle.innerText = element.innerText;
-            modInfoText.innerText = info;
-            popup.classList.remove('hidden');
-        });
-    });
-
-    closePopupButton.addEventListener('click', function () {
-        popup.classList.add('hidden');
-    });
-});
-
